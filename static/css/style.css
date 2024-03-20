@@ -284,8 +284,7 @@ textarea {
     transform-origin: center top;
 }
 
-.jj-list-con li:hover {
-    animation: swing 1s linear 0s 0.2 forwards
+
 }
 @keyframes swing {
     0%, 100% {
