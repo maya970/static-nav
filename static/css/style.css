@@ -67,11 +67,12 @@ body {
 }
 
 .jj-list-con li {
-  width: calc(50% - 5px); /* Adjusted width for mobile */
+  flex-basis: calc(50% - 5px); /* Adjusted width for mobile */
   margin-bottom: 5px; /* Adjusted margin */
   padding: 10px; /* Adjusted padding */
   background-color: #f2f2f2;
   border-radius: 5px;
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
 }
 
 .footer {
