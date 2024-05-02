@@ -15,6 +15,8 @@ body, ul, li, h1, h2, h3, h4, h5, h6, p, form, dl, dt, dd {
 
 img {
     border: none;
+    max-width: 100%;
+    height: auto; /* 保持图片比例 */
 }
 
 li {
@@ -40,7 +42,8 @@ textarea {
 
 /* 页面布局 */
 .inner-center {
-    width: 1000px;
+    width: 90%; /* 使用百分比更灵活 */
+    max-width: 1000px; /* 最大宽度限制 */
     margin: 0 auto;
 }
 
@@ -63,7 +66,7 @@ textarea {
 .logo-box {
     display: flex;
     overflow: hidden;
-    margin-left: 250px;
+    margin-left: 25%; /* 更具语义化的值 */
     align-items: center;
 }
 
@@ -82,7 +85,7 @@ textarea {
 }
 
 /* 搜索框样式 */
-.search-section {
+.search-container { /* 更具语义化的类名 */
     margin-top: 14px;
     margin-bottom: 40px;
     position: relative;
@@ -91,12 +94,13 @@ textarea {
 
 .search-left {
     display: flex;
-    width: 877px;
+    flex: 1; /* 使用 flex 更灵活 */
     height: 54px;
     line-height: 54px;
     border: 1px solid rgba(217, 217, 217, 0.96);
     padding-left: 10px;
 }
+
 
 .search-logo {
     width: 40px;
