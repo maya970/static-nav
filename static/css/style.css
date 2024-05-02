@@ -234,7 +234,7 @@ textarea {
 
 /* 简洁版内容区域样式 */
 .jj-list {
-    width: calc(33.3% - 20px); /* 每个元素占据三分之一宽度 */
+    width: calc(100% - 20px); /* 每个元素占据三分之一宽度 */
     margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #eee;
