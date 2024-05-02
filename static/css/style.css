@@ -1,18 +1,23 @@
-/* 重置样式 */
+/* 全局样式重置 */
 * {
     margin: 0;
     padding: 0;
+    font-family: "微软雅黑";
     box-sizing: border-box;
-    font-family: "微软雅黑", sans-serif;
 }
 
-/* 全局样式 */
-body {
-    background-color: #fff;
+body, ul, li, h1, h2, h3, h4, h5, h6, p, form, dl, dt, dd {
+    margin: 0;
+    padding: 0;
     font-size: 14px;
+    font-weight: normal;
 }
 
-ul, ol {
+img {
+    border: none;
+}
+
+li {
     list-style: none;
 }
 
@@ -20,7 +25,20 @@ a {
     text-decoration: none;
 }
 
-/* 容器样式 */
+html, body {
+    background: #fff;
+    height: 100%;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+textarea {
+    -webkit-appearance: none;
+    outline: 0;
+}
+
+/* 页面布局 */
 .inner-center {
     width: 1000px;
     margin: 0 auto;
@@ -31,20 +49,26 @@ a {
     min-height: 100vh;
 }
 
+.content-inside {
+    padding-bottom: 60px;
+}
+
 .footer {
     height: 60px;
     text-align: center;
-    margin-top: -60px; 
+    margin-top: -60px;
 }
 
 /* Logo 样式 */
 .logo-box {
     display: flex;
-    align-items: center;
+    overflow: hidden;
     margin-left: 250px;
+    align-items: center;
 }
 
 .logo-left {
+    position: relative;
     width: 125px;
     height: 121px;
     cursor: pointer;
@@ -54,29 +78,30 @@ a {
     padding-left: 36px;
     font-size: 36px;
     color: rgba(0, 39, 102, 1);
-    font-family: "SourceHanSansSC-regular", sans-serif;
+    font-family: SourceHanSansSC-regular;
 }
 
 /* 搜索框样式 */
 .search-section {
-    margin: 14px 0 40px;
+    margin-top: 14px;
+    margin-bottom: 40px;
     position: relative;
     display: flex;
-    align-items: center;
 }
 
 .search-left {
+    display: flex;
     width: 877px;
     height: 54px;
-    display: flex;
-    align-items: center;
+    line-height: 54px;
     border: 1px solid rgba(217, 217, 217, 0.96);
+    padding-left: 10px;
 }
 
 .search-logo {
     width: 40px;
     height: 40px;
-    background: url("./img/scgoogle.png") center/cover no-repeat;
+    background: url("./img/scgoogle.png") center center no-repeat;
     filter: grayscale(100%);
     opacity: 0.2;
     cursor: pointer;
@@ -91,8 +116,8 @@ a {
 .search-methods {
     display: none;
     position: absolute;
-    top: 54px;
     left: 0;
+    top: 54px;
     width: 155px;
     border: 1px solid rgba(217, 217, 217, 0.96);
     background-color: #fff;
@@ -100,15 +125,41 @@ a {
 
 .search-methods li {
     padding-left: 39px;
-    background-size: 20px;
-    background-repeat: no-repeat;
+    background: url("./img/scgoogle.png") 10px no-repeat;
     height: 34px;
     line-height: 34px;
     color: #545454;
     cursor: pointer;
 }
 
-/* 搜索结果样式 */
+.search-methods li.baidu {
+    background-image: url("./img/scbaidu.png");
+}
+
+.search-methods li.bing {
+    background-image: url("./img/scbing.png");
+}
+
+.search-methods li.sogou {
+    background-image: url("./img/scsogou.png");
+}
+
+.search-methods li.wangpan {
+    background-image: url("./img/scwangpan.png");
+}
+
+.search-methods li.so {
+    background-image: url("./img/scso.png");
+}
+
+.search-methods li.google {
+    background-image: url("./img/scgoogle.png");
+}
+
+.search-methods .search-item:hover {
+    background-color: #f0f0f0;
+}
+
 .search-result {
     display: none;
     position: absolute;
@@ -126,26 +177,30 @@ a {
 }
 
 .result-item.active {
-    background: #f0f0f0;
+    background: #F0F0F0;
 }
 
-/* 输入框样式 */
+.result-item:hover {
+    background-color: #eee;
+    cursor: pointer;
+}
+
 .input-wrap {
     position: relative;
     flex: 1;
 }
 
-.search-input {
+.input-wrap .search-input {
     height: 52px;
     width: 100%;
     outline: 0;
-    border: 0;
+    border: 1px solid rgba(217, 217, 217, 0.96);
+    border-radius: 5px;
     font-size: 16px;
     padding-left: 15px;
 }
 
-.clear-keyword {
-    display: none;
+.input-wrap .clear-keyword {
     position: absolute;
     top: 50%;
     right: 10px;
@@ -153,26 +208,23 @@ a {
     cursor: pointer;
     color: #d2d2d2;
     font-size: 30px;
+    display: none;
 }
 
-/* 搜索按钮样式 */
 .search-submit {
     width: 123px;
     height: 54px;
     line-height: 54px;
-    background: linear-gradient(90deg, #1890FF, #455bfb);
+    background-color: #1890FF;
     color: #fff;
     font-size: 18px;
     font-weight: 500;
     text-align: center;
-    font-family: "Roboto", sans-serif;
+    font-family: Roboto;
     border: 1px solid #1890ff;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.search-submit:hover {
-    background-color: #1356dc;
+    background: linear-gradient(90deg, #1890FF, #455bfb);
+    border-radius: 5px;
 }
 
 /* 导航内容样式 */
@@ -180,31 +232,24 @@ a {
     overflow: hidden;
 }
 
-/* 简洁版样式定义 */
+/* 简洁版内容区域样式 */
 .jj-list {
-    width: 100%;
-    margin-bottom: 20px;
-    overflow: hidden;
-}
-
-.jj-list-con {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.jj-list-item {
-    box-sizing: border-box;
-    width: calc(33.33% - 20px);
+    width: calc(33.33% - 20px); /* 每个元素占据三分之一宽度 */
     margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #eee;
     border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    box-sizing: border-box;
 }
 
-.jj-list-item:hover {
+.jj-list:hover {
     transform: translateY(-5px);
+}
+
+.jj-list:nth-child(3n) {
+    margin-right: 0;
 }
 
 .jj-list-tit {
