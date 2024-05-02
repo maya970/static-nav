@@ -9,20 +9,17 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   background-color: #f8f8f8;
+  font-size: 14px; /* Adjusted font size for mobile */
 }
 
 .inner-center {
-  max-width: 800px; /* Adjusted max-width */
-  margin: 0 auto;
-}
-
-.main {
-  padding: 10px; /* Adjusted padding */
+  width: 100%; /* Adjusted width for mobile */
+  padding: 10px;
 }
 
 .content-inside {
   background-color: #fff;
-  padding: 20px;
+  padding: 10px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -31,34 +28,35 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 10px; /* Adjusted margin */
 }
 
 .logo-left img {
   border-radius: 50%;
+  max-width: 50px; /* Adjusted max-width for mobile */
 }
 
 .logo-right span {
-  font-size: 24px;
+  font-size: 20px; /* Adjusted font size for mobile */
   color: #333;
 }
 
 .nav-content {
-  margin-top: 20px;
+  margin-top: 10px; /* Adjusted margin */
 }
 
 .jj-list {
-  margin-bottom: 20px;
+  margin-bottom: 10px; /* Adjusted margin */
 }
 
 .jj-list-tit {
-  font-size: 18px;
+  font-size: 16px; /* Adjusted font size for mobile */
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 5px; /* Adjusted margin */
 }
 
 .jj-list1-con li, .jj-list-con li {
-  margin-bottom: 10px;
+  margin-bottom: 5px; /* Adjusted margin */
 }
 
 /* Style for displaying jj-list-con items side by side */
@@ -69,9 +67,9 @@ body {
 }
 
 .jj-list-con li {
-  width: calc(48% - 5px); /* Adjusted width and margin */
-  margin-bottom: 10px;
-  padding: 10px;
+  width: calc(50% - 5px); /* Adjusted width for mobile */
+  margin-bottom: 5px; /* Adjusted margin */
+  padding: 5px; /* Adjusted padding */
   background-color: #f2f2f2;
   border-radius: 5px;
 }
@@ -80,7 +78,7 @@ body {
   margin-top: 20px;
   text-align: center;
   color: #8C8C8C;
-  font-size: 14px;
+  font-size: 12px; /* Adjusted font size for mobile */
 }
 
 .footer a {
