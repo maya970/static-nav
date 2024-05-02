@@ -257,13 +257,14 @@ textarea {
 /*-----------------------------简洁版样式定义- 开始---------------------------------------------------*/
 
 .jj-list {
-    width: 30%;
+    width: 100%; /* 占据整行宽度 */
     margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #eee;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    box-sizing: border-box; /* 确保内边距和边框不会撑开宽度 */
 }
 .jj-list:hover {
     transform: translateY(-5px);
