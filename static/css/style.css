@@ -290,3 +290,197 @@ textarea {
     background-color: #1890FF;
     color: #fff;
 }
+
+
+.search-logo {
+    width: 40px;
+    height: 40px;
+    background: url("./img/scgoogle.png") center center no-repeat;
+    filter: grayscale(100%);
+    opacity: 0.2;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
+.search-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.search-methods {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 54px;
+    width: 155px;
+    border: 1px solid rgba(217, 217, 217, 0.96);
+    background-color: #fff;
+}
+
+.search-methods li {
+    padding-left: 39px;
+    background: url("./img/scgoogle.png") 10px no-repeat;
+    height: 34px;
+    line-height: 34px;
+    color: #545454;
+    cursor: pointer;
+}
+
+.search-methods li.baidu {
+    background-image: url("./img/scbaidu.png");
+}
+
+.search-methods li.bing {
+    background-image: url("./img/scbing.png");
+}
+
+.search-methods li.sogou {
+    background-image: url("./img/scsogou.png");
+}
+
+.search-methods li.wangpan {
+    background-image: url("./img/scwangpan.png");
+}
+
+.search-methods li.so {
+    background-image: url("./img/scso.png");
+}
+
+.search-methods li.google {
+    background-image: url("./img/scgoogle.png");
+}
+
+.search-methods .search-item:hover {
+    background-color: #f0f0f0;
+}
+
+.search-result {
+    display: none;
+    position: absolute;
+    width: 837px;
+    top: 55px;
+    left: 40px;
+    border: 1px solid rgba(187, 187, 187, 1);
+    background-color: #fff;
+}
+
+.result-item {
+    height: 34px;
+    line-height: 34px;
+    padding-left: 15px;
+}
+
+.result-item.active {
+    background: #F0F0F0;
+}
+
+.result-item:hover {
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.input-wrap {
+    position: relative;
+    flex: 1;
+}
+
+.input-wrap .search-input {
+    height: 52px;
+    width: 100%;
+    outline: 0;
+    border: 1px solid rgba(217, 217, 217, 0.96);
+    border-radius: 5px;
+    font-size: 16px;
+    padding-left: 15px;
+}
+
+.input-wrap .clear-keyword {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #d2d2d2;
+    font-size: 30px;
+    display: none;
+}
+
+.search-submit {
+    width: 123px;
+    height: 54px;
+    line-height: 54px;
+    background-color: #1890FF;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    font-family: Roboto;
+    border: 1px solid #1890ff;
+    cursor: pointer;
+    background: linear-gradient(90deg, #1890FF, #455bfb);
+    border-radius: 5px;
+}
+
+/* 导航内容样式 */
+.nav-content {
+    overflow: hidden;
+}
+
+/* 简洁版内容区域样式 */
+.jj-list {
+    width: calc(100% - 20px); /* 每个元素占据三分之一宽度 */
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
+}
+.jj-list:nth-of-type(3n) {
+    padding-right: 0;
+}
+.jj-list-con li {
+    box-sizing: border-box; /*以IE盒子模型的width为标准*/
+    padding: 1px 1px; /*设置div的内边距*/
+    width: 25%; /*div等分成4部分*/
+    float: left;
+    transform-origin: center top;
+}
+.jj-list1-con li {
+    box-sizing: border-box; /*以IE盒子模型的width为标准*/
+    padding: 1px 1px; /*设置div的内边距*/
+    width: 100%; /*div等分成1部分*/
+    float: left;
+    transform-origin: center top;
+}
+
+.jj-list:hover {
+    transform: translateY(-5px);
+}
+
+.jj-list:nth-child(3n) {
+    margin-right: 0;
+}
+
+.jj-list-tit {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.jj-list-link {
+    display: block;
+    padding: 10px;
+    background-color: #f5f5f5;
+    color: #666;
+    text-align: center;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.jj-list-link:hover {
+    background-color: #1890FF;
+    color: #fff;
+}
