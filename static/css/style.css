@@ -1,23 +1,18 @@
-/* 全局样式重置 */
+/* 重置样式 */
 * {
     margin: 0;
     padding: 0;
-    font-family: "微软雅黑";
     box-sizing: border-box;
+    font-family: "微软雅黑", sans-serif;
 }
 
-body, ul, li, h1, h2, h3, h4, h5, h6, p, form, dl, dt, dd {
-    margin: 0;
-    padding: 0;
+/* 全局样式 */
+body {
+    background-color: #fff;
     font-size: 14px;
-    font-weight: normal;
 }
 
-img {
-    border: none;
-}
-
-li {
+ul, ol {
     list-style: none;
 }
 
@@ -25,20 +20,7 @@ a {
     text-decoration: none;
 }
 
-html, body {
-    background: #fff;
-    height: 100%;
-}
-
-input[type="button"],
-input[type="submit"],
-input[type="reset"],
-textarea {
-    -webkit-appearance: none;
-    outline: 0;
-}
-
-/* 页面布局 */
+/* 容器样式 */
 .inner-center {
     width: 1000px;
     margin: 0 auto;
@@ -49,26 +31,20 @@ textarea {
     min-height: 100vh;
 }
 
-.content-inside {
-    padding-bottom: 60px;
-}
-
 .footer {
     height: 60px;
     text-align: center;
-    margin-top: -60px;
+    margin-top: -60px; 
 }
 
 /* Logo 样式 */
 .logo-box {
     display: flex;
-    overflow: hidden;
-    margin-left: 250px;
     align-items: center;
+    margin-left: 250px;
 }
 
 .logo-left {
-    position: relative;
     width: 125px;
     height: 121px;
     cursor: pointer;
@@ -78,30 +54,29 @@ textarea {
     padding-left: 36px;
     font-size: 36px;
     color: rgba(0, 39, 102, 1);
-    font-family: SourceHanSansSC-regular;
+    font-family: "SourceHanSansSC-regular", sans-serif;
 }
 
 /* 搜索框样式 */
 .search-section {
-    margin-top: 14px;
-    margin-bottom: 40px;
+    margin: 14px 0 40px;
     position: relative;
     display: flex;
+    align-items: center;
 }
 
 .search-left {
-    display: flex;
     width: 877px;
     height: 54px;
-    line-height: 54px;
+    display: flex;
+    align-items: center;
     border: 1px solid rgba(217, 217, 217, 0.96);
-    padding-left: 10px;
 }
 
 .search-logo {
     width: 40px;
     height: 40px;
-    background: url("./img/scgoogle.png") center center no-repeat;
+    background: url("./img/scgoogle.png") center/cover no-repeat;
     filter: grayscale(100%);
     opacity: 0.2;
     cursor: pointer;
@@ -116,8 +91,8 @@ textarea {
 .search-methods {
     display: none;
     position: absolute;
-    left: 0;
     top: 54px;
+    left: 0;
     width: 155px;
     border: 1px solid rgba(217, 217, 217, 0.96);
     background-color: #fff;
@@ -125,41 +100,15 @@ textarea {
 
 .search-methods li {
     padding-left: 39px;
-    background: url("./img/scgoogle.png") 10px no-repeat;
+    background-size: 20px;
+    background-repeat: no-repeat;
     height: 34px;
     line-height: 34px;
     color: #545454;
     cursor: pointer;
 }
 
-.search-methods li.baidu {
-    background-image: url("./img/scbaidu.png");
-}
-
-.search-methods li.bing {
-    background-image: url("./img/scbing.png");
-}
-
-.search-methods li.sogou {
-    background-image: url("./img/scsogou.png");
-}
-
-.search-methods li.wangpan {
-    background-image: url("./img/scwangpan.png");
-}
-
-.search-methods li.so {
-    background-image: url("./img/scso.png");
-}
-
-.search-methods li.google {
-    background-image: url("./img/scgoogle.png");
-}
-
-.search-methods .search-item:hover {
-    background-color: #f0f0f0;
-}
-
+/* 搜索结果样式 */
 .search-result {
     display: none;
     position: absolute;
@@ -177,30 +126,26 @@ textarea {
 }
 
 .result-item.active {
-    background: #F0F0F0;
+    background: #f0f0f0;
 }
 
-.result-item:hover {
-    background-color: #eee;
-    cursor: pointer;
-}
-
+/* 输入框样式 */
 .input-wrap {
     position: relative;
     flex: 1;
 }
 
-.input-wrap .search-input {
+.search-input {
     height: 52px;
     width: 100%;
     outline: 0;
-    border: 1px solid rgba(217, 217, 217, 0.96);
-    border-radius: 5px;
+    border: 0;
     font-size: 16px;
     padding-left: 15px;
 }
 
-.input-wrap .clear-keyword {
+.clear-keyword {
+    display: none;
     position: absolute;
     top: 50%;
     right: 10px;
@@ -208,23 +153,26 @@ textarea {
     cursor: pointer;
     color: #d2d2d2;
     font-size: 30px;
-    display: none;
 }
 
+/* 搜索按钮样式 */
 .search-submit {
     width: 123px;
     height: 54px;
     line-height: 54px;
-    background-color: #1890FF;
+    background: linear-gradient(90deg, #1890FF, #455bfb);
     color: #fff;
     font-size: 18px;
     font-weight: 500;
     text-align: center;
-    font-family: Roboto;
+    font-family: "Roboto", sans-serif;
     border: 1px solid #1890ff;
     cursor: pointer;
-    background: linear-gradient(90deg, #1890FF, #455bfb);
-    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.search-submit:hover {
+    background-color: #1356dc;
 }
 
 /* 导航内容样式 */
@@ -232,31 +180,31 @@ textarea {
     overflow: hidden;
 }
 
-/*-----------------------------简洁版样式定义- 开始---------------------------------------------------*/
-
+/* 简洁版样式定义 */
 .jj-list {
-    width: 100%; /* 每个 jj-list 元素占据整行宽度 */
-    margin-bottom: 20px; /* 底部留出间距 */
-    overflow: hidden; /* 清除浮动影响 */
+    width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
 }
 
 .jj-list-con {
-    display: flex; /* 使用 flex 布局 */
-    justify-content: space-between; /* 元素之间均匀分布 */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .jj-list-item {
-    box-sizing: border-box; /* 以边框盒模型计算宽度 */
-    width: calc(33.33% - 20px); /* 每个元素占据三分之一宽度 */
-    margin-right: 20px; /* 右侧留出间距 */
-    padding: 10px; /* 内边距 */
-    border: 1px solid #ccc; /* 边框样式 */
-    border-radius: 5px; /* 边框圆角 */
-    transition: transform 0.3s ease; /* 变换效果 */
+    box-sizing: border-box;
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
 }
 
 .jj-list-item:hover {
-    transform: translateY(-5px); /* 鼠标悬停时上移 */
+    transform: translateY(-5px);
 }
 
 .jj-list-tit {
@@ -280,5 +228,3 @@ textarea {
     background-color: #1890FF;
     color: #fff;
 }
-
-/*-----------------------------简洁版样式定义- 结束---------------------------------------------------*/
