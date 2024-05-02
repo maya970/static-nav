@@ -69,7 +69,7 @@ body {
 .jj-list-con li {
   width: calc(50% - 5px); /* Adjusted width for mobile */
   margin-bottom: 5px; /* Adjusted margin */
-  padding: 5px; /* Adjusted padding */
+  padding: 10px; /* Adjusted padding */
   background-color: #f2f2f2;
   border-radius: 5px;
 }
