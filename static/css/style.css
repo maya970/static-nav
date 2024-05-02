@@ -234,7 +234,7 @@ textarea {
 
 /* 简洁版内容区域样式 */
 .jj-list {
-    width: calc(100% - 20px); /* 每个元素占据三分之一宽度 */
+    width: calc(33.3% - 20px); /* 每个元素占据三分之一宽度 */
     margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #eee;
@@ -242,6 +242,9 @@ textarea {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     box-sizing: border-box;
+}
+.jj-list:nth-of-type(3n) {
+    padding-right: 0;
 }
 
 .jj-list:hover {
