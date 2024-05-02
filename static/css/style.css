@@ -45,11 +45,6 @@ body {
   margin-top: 10px; /* Adjusted margin */
 }
 
-/* Removed styling for .jj-list */
-/* .jj-list {
-  margin-bottom: 10px; 
-} */
-
 .jj-list-tit {
   font-size: 16px; /* Adjusted font size for mobile */
   font-weight: bold;
