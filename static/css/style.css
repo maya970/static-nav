@@ -1,12 +1,17 @@
-/* 全局样式重置 */
+/* 全局样式 */
 * {
     margin: 0;
     padding: 0;
-    font-family: "微软雅黑";
     box-sizing: border-box;
 }
 
-body, ul, li, h1, h2, h3, h4, h5, h6, p, form, dl, dt, dd {
+body {
+    font-family: "微软雅黑";
+    background: #fff;
+    height: 100%;
+}
+
+ul, li, h1, h2, h3, h4, h5, h6, p, form, dl, dt, dd {
     margin: 0;
     padding: 0;
     font-size: 14px;
@@ -14,9 +19,9 @@ body, ul, li, h1, h2, h3, h4, h5, h6, p, form, dl, dt, dd {
 }
 
 img {
-    border: none;
     max-width: 100%;
-    height: auto; /* 保持图片比例 */
+    height: auto;
+    border: none;
 }
 
 li {
@@ -25,11 +30,6 @@ li {
 
 a {
     text-decoration: none;
-}
-
-html, body {
-    background: #fff;
-    height: 100%;
 }
 
 input[type="button"],
@@ -42,8 +42,8 @@ textarea {
 
 /* 页面布局 */
 .inner-center {
-    width: 90%; /* 使用百分比更灵活 */
-    max-width: 1000px; /* 最大宽度限制 */
+    width: 90%;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -65,13 +65,10 @@ textarea {
 /* Logo 样式 */
 .logo-box {
     display: flex;
-    overflow: hidden;
-    margin-left: 25%; /* 更具语义化的值 */
     align-items: center;
 }
 
 .logo-left {
-    position: relative;
     width: 125px;
     height: 121px;
     cursor: pointer;
@@ -85,7 +82,7 @@ textarea {
 }
 
 /* 搜索框样式 */
-.search-container { /* 更具语义化的类名 */
+.search-container {
     margin-top: 14px;
     margin-bottom: 40px;
     position: relative;
@@ -93,15 +90,13 @@ textarea {
 }
 
 .search-left {
-    display: flex;
-    flex: 1; /* 使用 flex 更灵活 */
+    flex: 1;
     height: 54px;
     line-height: 54px;
     border: 1px solid rgba(217, 217, 217, 0.96);
     padding-left: 10px;
 }
 
-
 .search-logo {
     width: 40px;
     height: 40px;
@@ -129,11 +124,12 @@ textarea {
 
 .search-methods li {
     padding-left: 39px;
-    background: url("./img/scgoogle.png") 10px no-repeat;
     height: 34px;
     line-height: 34px;
     color: #545454;
     cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: 10px center;
 }
 
 .search-methods li.baidu {
@@ -181,7 +177,7 @@ textarea {
 }
 
 .result-item.active {
-    background: #F0F0F0;
+    background: #f0f0f0;
 }
 
 .result-item:hover {
@@ -247,216 +243,21 @@ textarea {
     transition: transform 0.3s ease;
     box-sizing: border-box;
 }
+
 .jj-list:nth-of-type(3n) {
     padding-right: 0;
 }
-.jj-list-con li {
-    box-sizing: border-box; /*以IE盒子模型的width为标准*/
-    padding: 1px 1px; /*设置div的内边距*/
-    width: 25%; /*div等分成4部分*/
-    float: left;
-    transform-origin: center top;
-}
-.jj-list1-con li {
-    box-sizing: border-box; /*以IE盒子模型的width为标准*/
-    padding: 1px 1px; /*设置div的内边距*/
-    width: 100%; /*div等分成1部分*/
-    float: left;
-    transform-origin: center top;
-}
 
-.jj-list:hover {
-    transform: translateY(-5px);
-}
-
-.jj-list:nth-child(3n) {
-    margin-right: 0;
-}
-
-.jj-list-tit {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.jj-list-link {
-    display: block;
-    padding: 10px;
-    background-color: #f5f5f5;
-    color: #666;
-    text-align: center;
-    border-radius: 3px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.jj-list-link:hover {
-    background-color: #1890FF;
-    color: #fff;
-}
-
-
-.search-logo {
-    width: 40px;
-    height: 40px;
-    background: url("./img/scgoogle.png") center center no-repeat;
-    filter: grayscale(100%);
-    opacity: 0.2;
-    cursor: pointer;
-    transition: filter 0.3s ease;
-}
-
-.search-logo:hover {
-    filter: grayscale(0%);
-    opacity: 1;
-}
-
-.search-methods {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 54px;
-    width: 155px;
-    border: 1px solid rgba(217, 217, 217, 0.96);
-    background-color: #fff;
-}
-
-.search-methods li {
-    padding-left: 39px;
-    background: url("./img/scgoogle.png") 10px no-repeat;
-    height: 34px;
-    line-height: 34px;
-    color: #545454;
-    cursor: pointer;
-}
-
-.search-methods li.baidu {
-    background-image: url("./img/scbaidu.png");
-}
-
-.search-methods li.bing {
-    background-image: url("./img/scbing.png");
-}
-
-.search-methods li.sogou {
-    background-image: url("./img/scsogou.png");
-}
-
-.search-methods li.wangpan {
-    background-image: url("./img/scwangpan.png");
-}
-
-.search-methods li.so {
-    background-image: url("./img/scso.png");
-}
-
-.search-methods li.google {
-    background-image: url("./img/scgoogle.png");
-}
-
-.search-methods .search-item:hover {
-    background-color: #f0f0f0;
-}
-
-.search-result {
-    display: none;
-    position: absolute;
-    width: 837px;
-    top: 55px;
-    left: 40px;
-    border: 1px solid rgba(187, 187, 187, 1);
-    background-color: #fff;
-}
-
-.result-item {
-    height: 34px;
-    line-height: 34px;
-    padding-left: 15px;
-}
-
-.result-item.active {
-    background: #F0F0F0;
-}
-
-.result-item:hover {
-    background-color: #eee;
-    cursor: pointer;
-}
-
-.input-wrap {
-    position: relative;
-    flex: 1;
-}
-
-.input-wrap .search-input {
-    height: 52px;
-    width: 100%;
-    outline: 0;
-    border: 1px solid rgba(217, 217, 217, 0.96);
-    border-radius: 5px;
-    font-size: 16px;
-    padding-left: 15px;
-}
-
-.input-wrap .clear-keyword {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    cursor: pointer;
-    color: #d2d2d2;
-    font-size: 30px;
-    display: none;
-}
-
-.search-submit {
-    width: 123px;
-    height: 54px;
-    line-height: 54px;
-    background-color: #1890FF;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    text-align: center;
-    font-family: Roboto;
-    border: 1px solid #1890ff;
-    cursor: pointer;
-    background: linear-gradient(90deg, #1890FF, #455bfb);
-    border-radius: 5px;
-}
-
-/* 导航内容样式 */
-.nav-content {
-    overflow: hidden;
-}
-
-/* 简洁版内容区域样式 */
-.jj-list {
-    width: calc(100% - 20px); /* 每个元素占据三分之一宽度 */
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #eee;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+.jj-list-con li, .jj-list1-con li {
     box-sizing: border-box;
-}
-.jj-list:nth-of-type(3n) {
-    padding-right: 0;
-}
-.jj-list-con li {
-    box-sizing: border-box; /*以IE盒子模型的width为标准*/
-    padding: 1px 1px; /*设置div的内边距*/
-    width: 25%; /*div等分成4部分*/
+    padding: 1px 1px;
+    width: 25%;
     float: left;
     transform-origin: center top;
 }
+
 .jj-list1-con li {
-    box-sizing: border-box; /*以IE盒子模型的width为标准*/
-    padding: 1px 1px; /*设置div的内边距*/
-    width: 100%; /*div等分成1部分*/
-    float: left;
-    transform-origin: center top;
+    width: 100%; /* 单独显示一个元素 */
 }
 
 .jj-list:hover {
@@ -471,20 +272,4 @@ textarea {
     font-size: 18px;
     font-weight: bold;
     color: #333;
-    margin-bottom: 10px;
-}
-
-.jj-list-link {
-    display: block;
-    padding: 10px;
-    background-color: #f5f5f5;
-    color: #666;
-    text-align: center;
-    border-radius: 3px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.jj-list-link:hover {
-    background-color: #1890FF;
-    color: #fff;
-}
+    margin-bottom:
