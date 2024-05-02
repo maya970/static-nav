@@ -45,9 +45,10 @@ body {
   margin-top: 10px; /* Adjusted margin */
 }
 
-.jj-list {
-  margin-bottom: 10px; /* Adjusted margin */
-}
+/* Removed styling for .jj-list */
+/* .jj-list {
+  margin-bottom: 10px; 
+} */
 
 .jj-list-tit {
   font-size: 16px; /* Adjusted font size for mobile */
@@ -73,7 +74,6 @@ body {
 .jj-list-con li {
   flex-basis: calc(20% - 5px); /* Adjusted width for mobile */
   margin-bottom: 5px; /* Adjusted margin */
-
 }
 
 .footer {
